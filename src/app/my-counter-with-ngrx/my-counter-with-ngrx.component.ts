@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { increment, decrement, reset } from '../counter.actions';
+import { increment, decrement, reset, doubleincrement } from '../counter.actions';
 
 @Component({
   selector: 'app-my-counter-with-ngrx',
@@ -26,6 +26,10 @@ export class MyCounterWithNgrxComponent {
 
   reset() {
     this.store.dispatch(reset());
+  }
+  doubleincrement() {
+    console.log('double increment')
+    this.store.dispatch(doubleincrement({ multiply: 3, add: 8 }));
   }
 
 }
