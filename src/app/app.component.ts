@@ -34,7 +34,11 @@ export class AppComponent {
           // const mainoutlet = this.renderer.selectRootElement('#mainoutlet');
           let mainoutlet = this.input.nativeElement;
           console.log('in try block NavigationEnd ')
-          mainoutlet.scrollIntoView();
+          mainoutlet.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+            inline: "nearest"
+          });
           // {
           //   behavior: "smooth",
           //   block: "start",
