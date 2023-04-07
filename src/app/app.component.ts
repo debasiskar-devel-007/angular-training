@@ -1,4 +1,4 @@
-import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { environment } from './../environments/environment';
 // import { Router } from '@angular/router';
 import { Router, Event, NavigationStart, NavigationEnd, NavigationError } from '@angular/router';
@@ -14,7 +14,7 @@ export class AppComponent {
   @ViewChild('mainoutlet')
   input!: ElementRef;
 
-  constructor(public router: Router, private renderer: Renderer2) {
+  constructor(public router: Router) {
     console.log(environment.environment_title); // Logs  for  environment file
     this.configuration = environment;
 
